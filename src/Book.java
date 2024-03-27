@@ -33,7 +33,6 @@ public class Book implements Language {
 //        } catch (ExceptionInInitializerError e) {
 //            System.out.println("There is no data. No data in the field");
 //        }
-
     }
 
     public String getBookNameData(){

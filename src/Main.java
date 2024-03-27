@@ -1,40 +1,41 @@
+import menu.BookMenu;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws IOException{
+        // ArrayList<Book> books = new ArrayList<>();
+
+        CollectionManager.readBooks();
+
+        int userChoice = BookMenu.printMenu();
+
+        while (userChoice == 1) {
+            Scanner scanner = new Scanner(System.in);
+            String bookName = scanner.nextLine();
+            String bookDescription = scanner.nextLine();
+            String language = scanner.nextLine();
+
+            Book book = new Book(bookName, bookDescription, language);
+            CollectionManager.addBook(book);
+
+            userChoice = BookMenu.printMenu();
+        }
+
+        CollectionManager.saveBooks();
+
+        //CollectionManager.writeBook();
+        //CollectionManager.readBook();
 
 
-        Author author = new Author("Anjey ", "Sapkowski ", "ABCblabla ");
-        Book fantasy = new Book ("The Witcher. The Last Wish", "Watchers are monster hunters given superhuman abilities for the purpose of killing dangerous creatures. ", "Polish");
-        BookSeries series = new BookSeries ("The witcher", 8, 878, "Polish");
+        // books.add(new Book("Harry Potter", "The boy who survived", "EN"));
+        // System.out.println(books);
 
-        Author author1 = new Author("Jacek ", "Piekara ");
-        Book darkFantasy = new Book("Inquisitor. Servant of God. ", " ", "Inquisitor ");
-
-        Author author2 = new Author(" Alexey ", "Pehov ", "123AB");
-        Book fantasy1 = new Book("Guardian ", 498);
-        Book fantasy2 = new Book("Shadow Prowler (Chronicles of Siala)", "This is a short book description");
-
-        System.out.println(fantasy.getBookNameData() + series.getBookSeriesData() + author.getAuthorData());
-        fantasy.printNativeLanguage();
-        series.printNativeLanguage();
-
-        Booklet cityGuide = new Booklet("", "", "", 23);
-        cityGuide.printNativeLanguage();
-        cityGuide.printFoldsNumber();
-        Book userBookAuthorInput = new Book("", "", "");
-        userBookAuthorInput.ConsoleBookInput();
-        Author userAuthorNameSurnameInput = new Author("", "");
-        userAuthorNameSurnameInput.ConsoleAuthorInput();
-
-
-//        System.out.printf("Your favorite book is %s and the author is %s %s", userBookAuthorInput.bookName, userAuthorNameSurnameInput.authorName, userAuthorNameSurnameInput.authorSurname);
-
-
-
-
+        // Book userBookAuthorInput = new Book("", "", "");
+        // userBookAuthorInput.ConsoleBookInput();
     }
-
-
 }
