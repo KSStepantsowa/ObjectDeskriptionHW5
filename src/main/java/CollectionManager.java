@@ -40,9 +40,5 @@ public class CollectionManager {
         bookRead.close();
     }
 }
-// read from file
-//    collection (лист из книг)
-//    write to file (save)
-//    методы при вызове кот можно взаимодейст с коллекцией add
-//
+
 
