@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/ObjectDeskriptionHW5_jar</output-path>
     <root id="archive" name="ObjectDeskriptionHW5.jar">
       <element id="module-output" name="ObjectDeskriptionHW5" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>
