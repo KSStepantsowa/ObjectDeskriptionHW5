@@ -33,11 +33,12 @@ public class Book implements Language {
 //        } catch (ExceptionInInitializerError e) {
 //            System.out.println("There is no data. No data in the field");
 //        }
-
     }
 
     public String getBookNameData(){
-        return String.format("Here is info about %s. ", bookName);
+//        return String.format("Here is info about %s. ", bookName);
+        return String.format(bookName);
+
     }
 
     @Override
