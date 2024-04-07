@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException{
-        // ArrayList<Book> books = new ArrayList<>();
+//         ArrayList<Book> books = new ArrayList<>();
 
         CollectionManager.readBooks();
 
@@ -28,11 +28,20 @@ public class Main {
 
         CollectionManager.saveBooks();
 
+
+        String[][] testBookData = new String [][]{
+                {"First", "BOOK"},
+                {"Second", "BOOK"},
+                {"Third", "BOOK"}
+        };
+                System.out.println(testBookData[0][1]);
+
+
+
         //CollectionManager.writeBook();
         //CollectionManager.readBook();
 
 
-        // books.add(new Book("Harry Potter", "The boy who survived", "EN"));
         // System.out.println(books);
 
         // Book userBookAuthorInput = new Book("", "", "");

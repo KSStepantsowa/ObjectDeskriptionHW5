@@ -36,7 +36,9 @@ public class Book implements Language {
     }
 
     public String getBookNameData(){
-        return String.format("Here is info about %s. ", bookName);
+//        return String.format("Here is info about %s. ", bookName);
+        return String.format(bookName);
+
     }
 
     @Override
