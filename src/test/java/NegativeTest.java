@@ -74,7 +74,7 @@ public class NegativeTest {
     @Test(groups = "negative")
     public void shouldFailTestBecauseOfException() throws IOException {
         try {
-//            throw new IOException();
+            throw new IOException();
         } catch (Exception e) {
             Assert.fail("Test failed");
         }
